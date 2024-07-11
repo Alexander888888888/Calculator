@@ -1,0 +1,81 @@
+body {
+    background-image: url(https://slidechef.net/wp-content/uploads/2021/10/Free-Maths-Background.jpg);
+    background-size: cover;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+.calculator {
+    width: 550px;
+    height: 575px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 15px;
+    padding: 20px;
+    background-color: #93b5c6;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #333;
+}
+
+.calcBox {
+    border: 0.5px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    background-color: #9AC9D0;
+    color: #333;
+    border-radius: 25px;
+}
+
+.calculator div:not(:first-child) {
+    cursor: pointer;
+    box-shadow: 0 9px #7f7f7f;
+}
+
+div[data-type="numbers"]:hover {
+    background-color: #a9dde3;
+}
+
+.sumButton:hover,
+.bottomButtons:hover {
+    background-color: #bbb;
+}
+
+#equals:hover {
+    background-color: #f45f5f;
+}
+
+.calculator div:not(:first-child):active {
+    box-shadow: 0 5px #4b4b4b;
+    transform: translateY(4px);
+}
+
+.sumButton {
+    background-color: #a5a5a5;
+    color: #000;
+}
+
+.bottomButtons {
+    background-color: #a5a5a5;
+}
+
+#displayScreen {
+    grid-column: 1 / span 4;
+    background-color: white;
+    font-size: 3.5rem;
+    justify-content: end;
+    padding: 0 20px;
+}
+
+#equals {
+    grid-row: 3 / span 4;
+    grid-column: 4;
+    background-color: #d66565;
+    color: #333;
+}
